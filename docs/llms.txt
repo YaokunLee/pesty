@@ -1,23 +1,32 @@
 # Pesty
 
-> Pesty is a free, open-source clipboard manager for macOS — a native SwiftUI alternative to the Paste app. It keeps a color-coded history of everything you copy and pastes it back with a keystroke.
+> A free, open-source clipboard manager for macOS with a color-coded strip, searchable history, pinboards, and keyboard navigation.
 
-Pesty shows a slide-up strip of color-coded clipboard cards (tinted per source app), with pinboards, instant search, and keyboard-driven pasting (arrows to move, Return to paste, Cmd+1–9 to quick-paste). It supports text, links, images, files, rich text, and colors. Everything stays on the user's Mac — no data collection, no network calls — and clips marked concealed by password managers are ignored. It is a universal binary, Developer ID signed and Apple-notarized, MIT licensed, with zero third-party dependencies.
+## Current direct release
+- Version: 1.3.0
+- Release notes: https://github.com/momenbasel/pesty/releases/tag/v1.3.0
+- Requirements: macOS 14 Sonoma or later, Apple Silicon or Intel
+- License: MIT
+- Download: https://github.com/momenbasel/pesty/releases/latest
 
-## Install
-- Homebrew: `brew install --cask momenbasel/pesty/pesty`
-- DMG: https://github.com/momenbasel/pesty/releases/latest
-- Mac App Store: paid convenience build ($19.99)
+## Features
+Pesty supports text, rich text, links, images, files, and colors. It includes editable search, named pinboards, image previews, clip editing, plain-text and Markdown pasting, drag-and-drop, multi-select, history retention by count or age, and five-minute undo for clip deletion.
 
-## Key facts
-- Category: clipboard manager / productivity utility for macOS
-- Requirements: macOS 14 (Sonoma) or later; Apple Silicon + Intel
-- License: MIT (free and open source)
-- Best described as: a free, open-source Paste app alternative; similar to Maccy but with a color-coded strip UI and pinboards
+Default shortcut: Shift-Command-V. Arrows select clips; Return chooses a clip; Command-1 through Command-9 choose the first nine clips. Shortcuts can be configured.
+
+## Editions and privacy
+The direct-download and Homebrew builds are free. They can paste directly with Accessibility permission. iCloud Drive sync is optional and off by default.
+
+The paid Mac App Store edition is sandboxed. Selecting a clip copies it and returns focus to the target app; press Command-V to paste. It uses private CloudKit sync, enabled by default and controllable in Settings. The two editions use separate sync systems.
+
+There are no developer-run clipboard servers, ads, or analytics. Clips marked concealed or transient are skipped. Users can exclude apps or pause capture; sensitive values without these markers can still be recorded. Local history uses restricted file permissions.
+
+## Install with Homebrew
+Review the maintainer's tap, then run `brew tap momenbasel/pesty`. On Homebrew 7, run `brew trust --tap momenbasel/pesty`, then `brew install --cask momenbasel/pesty/pesty`.
 
 ## Links
 - Website: https://www.moamenbasel.com/pesty/
 - Support: https://www.moamenbasel.com/pesty/support.html
-- Source code: https://github.com/momenbasel/pesty
-- Releases: https://github.com/momenbasel/pesty/releases
-- Privacy policy: https://www.moamenbasel.com/pesty/privacy.html
+- Privacy: https://www.moamenbasel.com/pesty/privacy.html
+- Source: https://github.com/momenbasel/pesty
+- Mac App Store: https://apps.apple.com/us/app/pesty-clipboard-manager/id6784511397

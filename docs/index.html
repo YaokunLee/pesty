@@ -7,7 +7,9 @@
 <meta name="description" content="Pesty is a free, open-source clipboard manager for macOS - a native Paste-app alternative. Color-coded clipboard history, pinboards, instant search, and keyboard-fast pasting. Universal, signed & notarized. Install with Homebrew." />
 <meta name="keywords" content="clipboard manager mac, mac clipboard manager, clipboard history mac, paste app alternative, free clipboard manager macOS, open source clipboard manager, macOS clipboard app, pinboards, copy paste history mac, Maccy alternative, clipboard manager swift" />
 <meta name="author" content="Moamen Basel" />
-<meta name="theme-color" content="#5B6CFF" />
+<meta name="theme-color" content="#f6f6fb" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#101017" media="(prefers-color-scheme: dark)" />
+<meta name="color-scheme" content="light dark" />
 <link rel="canonical" href="https://www.moamenbasel.com/pesty/" />
 <link rel="icon" type="image/png" href="assets/icon.png" />
 
@@ -33,7 +35,7 @@
   "description": "Pesty is a free, open-source clipboard manager for macOS - a native Paste-app alternative with color-coded clipboard history, pinboards, instant search, and keyboard-driven pasting.",
   "applicationCategory": "ProductivityApplication",
   "operatingSystem": "macOS 14.0 or later",
-  "softwareVersion": "1.1.0",
+  "softwareVersion": "1.3.0",
   "downloadUrl": "https://github.com/momenbasel/pesty/releases/latest",
   "url": "https://www.moamenbasel.com/pesty/",
   "image": "https://www.moamenbasel.com/pesty/assets/og-image.png",
@@ -41,120 +43,77 @@
   "license": "https://opensource.org/licenses/MIT",
   "author": { "@type": "Person", "name": "Moamen Basel" },
   "offers": {
-    "@type": "AggregateOffer",
+    "@type": "Offer",
     "priceCurrency": "USD",
-    "lowPrice": "0",
-    "highPrice": "19.99",
-    "offerCount": "2"
+    "price": "0",
+    "url": "https://github.com/momenbasel/pesty/releases/latest"
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"Is Pesty free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pesty is free and open source (MIT) on GitHub and installable with Homebrew. A paid convenience build is also on the Mac App Store."}},
-    {"@type":"Question","name":"Is Pesty a Paste app alternative?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pesty reimplements the core Paste experience - a slide-up, color-coded clipboard strip with pinboards, search, and keyboard pasting - as a free, open-source, native macOS app."}},
-    {"@type":"Question","name":"Does Pesty keep my clipboard private?","acceptedAnswer":{"@type":"Answer","text":"Yes. Everything stays on your Mac. Pesty collects no data, makes no network calls, and ignores clips marked concealed by password managers."}},
-    {"@type":"Question","name":"How do I install Pesty?","acceptedAnswer":{"@type":"Answer","text":"Run: brew install --cask momenbasel/pesty/pesty - or download the signed, notarized DMG from the GitHub releases page."}}
-  ]
-}
-</script>
-<style>
-  :root { --bg:#0e0e14; --card:#16161f; --fg:#f2f2f7; --muted:#a0a0b4; --accent:#6c7bff; }
-  * { box-sizing:border-box; }
-  body { margin:0; font-family:-apple-system,system-ui,"Segoe UI",sans-serif; background:var(--bg); color:var(--fg); line-height:1.6; }
-  a { color:var(--accent); text-decoration:none; }
-  .wrap { max-width:960px; margin:0 auto; padding:0 22px; }
-  header { text-align:center; padding:72px 0 36px; }
-  header img.logo { width:108px; height:108px; }
-  h1 { font-size:44px; margin:18px 0 6px; }
-  .tag { color:var(--muted); font-size:20px; margin:0 0 28px; }
-  .cta { display:inline-flex; gap:12px; flex-wrap:wrap; justify-content:center; }
-  .btn { background:var(--accent); color:#fff; padding:12px 22px; border-radius:10px; font-weight:600; }
-  .btn.alt { background:var(--card); color:var(--fg); border:1px solid #2a2a3a; }
-  .shot { width:100%; border-radius:14px; margin:18px 0 8px; border:1px solid #23232f; }
-  code { background:var(--card); padding:3px 8px; border-radius:6px; font-size:15px; }
-  pre { background:var(--card); padding:14px 16px; border-radius:10px; overflow:auto; }
-  h2 { font-size:28px; margin-top:48px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px; }
-  .feat { background:var(--card); border:1px solid #20202c; border-radius:12px; padding:16px 18px; }
-  .feat h3 { margin:0 0 6px; font-size:17px; }
-  .feat p { margin:0; color:var(--muted); font-size:15px; }
-  table { width:100%; border-collapse:collapse; margin-top:16px; font-size:15px; }
-  th,td { text-align:left; padding:10px 12px; border-bottom:1px solid #23232f; }
-  th { color:var(--muted); font-weight:600; }
-  details { background:var(--card); border:1px solid #20202c; border-radius:10px; padding:12px 16px; margin:10px 0; }
-  summary { cursor:pointer; font-weight:600; }
-  footer { color:var(--muted); text-align:center; padding:48px 0; font-size:14px; }
-</style>
+<link rel="stylesheet" href="assets/site.css" />
+<script src="assets/site.js" defer></script>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <img class="logo" src="assets/icon.png" alt="Pesty clipboard manager app icon" />
-  <h1>Pesty</h1>
-  <p class="tag">A free, open-source clipboard manager for Mac.</p>
-  <div class="cta">
-    <a class="btn" href="https://github.com/momenbasel/pesty/releases/latest">Download for macOS</a>
-    <a class="btn alt" href="https://github.com/momenbasel/pesty">View on GitHub</a>
-  </div>
-  <p style="margin-top:18px;">
-    <a href="https://apps.apple.com/us/app/pesty-clipboard-manager/id6784511397"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83" alt="Download Pesty on the Mac App Store" height="52" /></a>
-  </p>
-  <p style="margin-top:14px;color:var(--muted);font-size:15px;">or <code>brew install --cask momenbasel/pesty/pesty</code></p>
-  <p style="margin-top:10px;color:var(--muted);font-size:13px;max-width:560px;margin-left:auto;margin-right:auto;">Pesty is free and open source. The one-time Mac App Store fee is optional - it only helps cover the yearly Apple Developer Program fee that keeps the app signed and notarized. The exact same app is free via Homebrew or direct download.</p>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="brand" href="./" aria-label="Pesty home"><img src="assets/icon.png" alt="" width="38" height="38" />Pesty</a>
+  <nav aria-label="Main navigation"><a href="./#features">Features</a><a href="./#install">Install</a><a href="support.html">Support</a><a href="https://github.com/momenbasel/pesty">GitHub</a></nav>
 </header>
+<main id="main" tabindex="-1" class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy"><p class="eyebrow">Your Mac's clipboard, remembered</p><h1 id="hero-title">Keep what you copy.</h1><p class="lead">Find yesterday's link, pin a useful snippet, and bring any clip back with a keystroke. Free and open source.</p><div class="actions"><a class="button primary" href="https://github.com/momenbasel/pesty/releases/latest">Download for Mac</a><a class="button secondary" href="#install">Installation options</a></div></div>
+    <img class="hero-icon" src="assets/icon.png" alt="Pesty app icon" width="192" height="192" />
+  </section>
+  <figure class="product-preview">
+    <a href="assets/screenshot-strip.png" aria-label="View the Pesty clipboard screenshot at full size"><img id="preview" src="assets/screenshot-strip.webp" srcset="assets/screenshot-strip-small.webp 1180w, assets/screenshot-strip.webp 2360w" sizes="(max-width: 767px) calc(100vw - 36px), (max-width: 1184px) calc(100vw - 64px), 1120px" alt="Pesty clipboard strip with color-coded text, link, code, color and email clips" width="2360" height="812" fetchpriority="high" /></a>
+    <figcaption><span>Find your clips by content, color, or the app they came from.</span><button class="text-button" id="demo-toggle" type="button" aria-pressed="false" hidden>Play demo</button></figcaption>
+  </figure>
+  <div class="requirements" aria-label="Requirements and release"><span>macOS 14 Sonoma or later</span><span>Apple Silicon &amp; Intel</span><a href="https://github.com/momenbasel/pesty/releases/tag/v1.3.0">What's new in 1.3.0</a></div>
 
-<img class="shot" src="assets/demo.gif" alt="Pesty clipboard manager demo on macOS - color-coded clipboard strip with keyboard navigation" />
+  <section id="features" class="section" aria-labelledby="features-title">
+    <h2 id="features-title">Your useful stuff, within reach.</h2>
+    <div class="features">
+      <article class="feature featured"><h3>A home for repeat pastes.</h3><p>Keep addresses, replies, code, and other reusable clips in named pinboards. Search the rest of your history as you type.</p><p class="feature-note">Text, rich text, links, images, files, and colors.</p></article>
+      <article class="feature"><h3>Stay on the keyboard.</h3><p>Press <kbd>⇧⌘V</kbd> to open Pesty, type to search, then use the arrows and <kbd>Return</kbd> to choose a clip.</p><p class="feature-note">Quick-pick the first nine with <kbd>⌘1</kbd> to <kbd>⌘9</kbd>.</p></article>
+      <article class="feature"><h3>Make the clip fit.</h3><p>Edit a clip, paste plain text or Markdown, and drag content into another app or Finder.</p><p class="feature-note">Select several clips with Command-click or Shift-click.</p></article>
+      <article class="feature tinted"><h3>Keep control of history.</h3><p>Exclude apps, pause capture, and choose retention by count or age. Undo a clip deletion for up to five minutes.</p><p class="feature-note">Clips marked concealed by password managers are skipped.</p></article>
+    </div>
+  </section>
 
-<section>
-  <h2>The Paste experience, free and open source</h2>
-  <p>Pesty keeps a history of everything you copy and brings it back with a keystroke. Press the global shortcut and a color-coded strip slides up from the bottom of your screen. Pick a clip with the arrow keys, press Return, and it pastes straight into the app you were using. It is a native SwiftUI reimplementation of the <a href="https://pasteapp.io">Paste</a> app - and it is free.</p>
-</section>
+  <section class="workflow section" aria-labelledby="workflow-title">
+    <div><h2 id="workflow-title">Copy. Find. Use it again.</h2><p class="section-intro">A menu-bar utility that stays close to the way you already work.</p></div>
+    <ol class="steps"><li><h3>Copy as usual</h3><p>Pesty records supported clipboard content while capture is running.</p></li><li><h3>Find the right clip</h3><p>Open the strip with <kbd>⇧⌘V</kbd>. Search, browse, or switch to a pinboard.</p></li><li><h3>Choose and paste</h3><p>The direct build can paste with Accessibility permission. In the App Store build, choose a clip, then press <kbd>⌘V</kbd>.</p></li></ol>
+  </section>
 
-<section>
-  <h2>Features</h2>
-  <div class="grid">
-    <div class="feat"><h3>Clipboard history</h3><p>Text, links, images, files, rich text, and colors - all remembered.</p></div>
-    <div class="feat"><h3>Color-coded cards</h3><p>Each clip is tinted by the app it came from, with a preview and timestamp.</p></div>
-    <div class="feat"><h3>Pinboards</h3><p>Save the snippets you reuse into named collections that never expire.</p></div>
-    <div class="feat"><h3>Instant search</h3><p>Just start typing to filter your whole clipboard history.</p></div>
-    <div class="feat"><h3>Keyboard-first</h3><p>Arrows to move, Return to paste, ⌘1–9 to quick-paste.</p></div>
-    <div class="feat"><h3>Private by default</h3><p>Everything stays on your Mac. No data collection, no network calls.</p></div>
-  </div>
-</section>
+  <section id="install" class="section" aria-labelledby="install-title">
+    <h2 id="install-title">Choose your installation.</h2><p class="section-intro">The GitHub and Homebrew builds are free. Both support macOS 14 or later on Apple Silicon and Intel.</p>
+    <div class="install-grid">
+      <article class="install-card"><h3>Direct download</h3><p>Open the signed, notarized DMG, drag Pesty to Applications, and launch it from there.</p><a class="button primary" href="https://github.com/momenbasel/pesty/releases/latest">Download for Mac</a><p class="small">Enable Accessibility in System Settings for direct pasting.</p></article>
+      <article class="install-card"><h3>Homebrew</h3><p>Review and add the maintainer's tap. On Homebrew 7, trust the tap before installing.</p><pre><code id="brew-command">brew tap momenbasel/pesty
+brew trust --tap momenbasel/pesty
+brew install --cask momenbasel/pesty/pesty</code></pre><button class="text-button" id="copy-command" type="button" hidden>Copy commands</button><span class="small copy-status" id="copy-status" role="status"></span></article>
+      <article class="install-card store"><h3>Mac App Store</h3><p>An optional paid edition supports development. It is sandboxed: choose a clip, return to your app, and press <kbd>⌘V</kbd>.</p><a class="button secondary" href="https://apps.apple.com/us/app/pesty-clipboard-manager/id6784511397">View on App Store</a><p class="small">Check the store for local pricing and availability.</p></article>
+    </div>
+  </section>
 
-<section>
-  <h2>How Pesty compares</h2>
-  <table>
-    <tr><th>&nbsp;</th><th>Pesty</th><th>Paste</th><th>Maccy</th></tr>
-    <tr><td>Price</td><td>Free (optional one-time fee on MAS)</td><td>Subscription</td><td>Free</td></tr>
-    <tr><td>Open source</td><td>Yes (MIT)</td><td>No</td><td>Yes</td></tr>
-    <tr><td>Color-coded strip UI</td><td>Yes</td><td>Yes</td><td>No (list)</td></tr>
-    <tr><td>Pinboards</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-    <tr><td>Native (no Electron)</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-  </table>
-</section>
+  <section class="privacy-section section" aria-labelledby="privacy-title">
+    <h2 id="privacy-title">Know where your clips go.</h2><p>Pesty has no developer-run clipboard servers, ads, or analytics. Local history uses restricted file permissions. Sync behavior depends on the edition you install.</p>
+    <div class="sync-grid"><div><h3>Direct &amp; Homebrew</h3><p>History stays local unless you enable iCloud Drive sync. Sync is off by default.</p></div><div><h3>Mac App Store</h3><p>Uses your private iCloud database through CloudKit. Sync is enabled by default and can be turned off in Settings.</p></div></div><a href="privacy.html">Read the privacy policy</a>
+  </section>
 
-<section>
-  <h2>Install</h2>
-  <pre>brew install --cask momenbasel/pesty/pesty</pre>
-  <p>Or download the signed, Apple-notarized <a href="https://github.com/momenbasel/pesty/releases/latest">DMG from GitHub</a>. Requires macOS 14 (Sonoma) or later. Universal - Apple Silicon and Intel.</p>
-</section>
-
-<section>
-  <h2>FAQ</h2>
-  <details><summary>Is Pesty really free?</summary><p>Yes - free and open source under the MIT license on GitHub, and installable with Homebrew. The Mac App Store build carries a small one-time fee, but it's optional: it only helps cover the yearly Apple Developer Program fee that keeps the app signed and notarized. It's the same app either way.</p></details>
-  <details><summary>Is it a good Paste app alternative?</summary><p>Pesty reimplements the parts of Paste people use every day - the slide-up strip, color-coded cards, pinboards, search, and keyboard pasting - as a free, native, open-source app.</p></details>
-  <details><summary>Does it keep my clipboard private?</summary><p>Yes. Nothing leaves your Mac. Pesty has no servers, no analytics, and ignores clips marked concealed by password managers.</p></details>
-</section>
-
-<footer>
-  Pesty is free and open source under the MIT License · <a href="https://github.com/momenbasel/pesty">GitHub</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a>
-  · Not affiliated with Paste (Wonder Warp / FIPLAB).
+  <section id="faq" class="section faq" aria-labelledby="faq-title"><h2 id="faq-title">A few useful answers.</h2>
+    <details><summary>Is Pesty free?</summary><p>Yes. Download the app from GitHub or install it with Homebrew for free, under the MIT license. The Mac App Store edition has an optional one-time purchase and different paste and sync behavior.</p></details>
+    <details><summary>What changed in version 1.3?</summary><p>Image previews, an editable search field, clip editing, drag-and-drop, multi-select, retention controls, and undo for deletions. See the <a href="https://github.com/momenbasel/pesty/releases/tag/v1.3.0">release notes</a> for the full list.</p></details>
+    <details><summary>Why does pasting ask for Accessibility?</summary><p>The direct and Homebrew builds use Accessibility permission to paste into another app. If you prefer, disable direct pasting and use <kbd>⌘V</kbd> yourself. The sandboxed Mac App Store edition uses this copy-and-switch flow without Accessibility permission.</p></details>
+    <details><summary>Does it save passwords?</summary><p>Clips marked concealed or transient are skipped. Pesty cannot recognize every sensitive value, so exclude sensitive apps in Settings → Privacy or pause capture before copying something private.</p></details>
+    <details><summary>Can I sync between the two editions?</summary><p>The direct build uses iCloud Drive, while the Mac App Store build uses CloudKit. They use separate sync systems. Use the same edition on your Macs for shared history.</p></details>
+    <details><summary>Need help with your setup?</summary><p>Start with the <a href="support.html">support guide</a> for shortcuts, permissions, sync, and history settings. You can also <a href="https://github.com/momenbasel/pesty/issues">report an issue on GitHub</a>.</p></details>
+  </section>
+</main>
+<footer class="site-footer wrap">
+  <div><a class="brand" href="./"><img src="assets/icon.png" alt="" width="28" height="28" />Pesty</a><p>Free and open source. Made for Mac.</p></div>
+  <nav aria-label="Footer navigation"><a href="https://github.com/momenbasel/pesty">Source code</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="https://github.com/momenbasel/pesty/blob/main/LICENSE">MIT License</a></nav>
+  <p class="fine-print">An independent project by Moamen Basel. Not affiliated with Paste or its makers.</p>
 </footer>
-</div>
 </body>
 </html>
